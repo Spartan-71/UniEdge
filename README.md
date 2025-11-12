@@ -1,13 +1,13 @@
 # UniEdge
 Intelligent Autoscaling Platform for Unikernels and Edge Deployments.
 
-### Overview
+## Overview
 
-SmartKraft is a lightweight, intelligent autoscaling platform built on top of Unikraft and KVM/QEMU, designed to bring cloud-grade scalability to resource-constrained or edge environments.
+UniKraft is a lightweight, intelligent autoscaling platform built on top of Unikraft and KVM/QEMU, designed to bring cloud-grade scalability to resource-constrained or edge environments.
 
 It automates deployment, scaling, and observability of Unikernel-based microservices like nginx, redis, or http-server — all while maintaining sub-second boot times and minimal resource overhead.
 
-### Core Features
+## Core Features
 
 - Unikernel-based Deployment – Automatically builds and deploys Unikraft-based Unikernel images using modular configurations.
 - Intelligent Autoscaling – Predictive scaling engine (using ML/heuristics) adjusts instances based on real-time metrics (CPU, memory, request rate).
