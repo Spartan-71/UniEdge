@@ -1,0 +1,23 @@
+services:
+  # Base image containing dependencies.
+  base:
+    image: redis:base
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # target: base
+    # Interactive shell
+    stdin_open: true
+    tty: true
+    # Networking and IPC for ROS 2
+    network_mode: host
+    ipc: host
+    # Needed to display graphical applications
+    privileged: true
+    volumes:
+      - ./src:/src
+    command: redis-server
+
+  dev:
+    extends: base
+    command: /usr/bin/python3 /src/inside_container.py
