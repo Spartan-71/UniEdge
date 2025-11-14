@@ -14,7 +14,8 @@ async def handle_websocket(websocket):
             message = await websocket.recv()
             json_dict = json.loads(message)
             if(json_dict['server'] == 'container'):
-                json_dict['data']['Cmd'] = "redis-server"
+                json_dict['data']['cmd'] = json_dict['command']
+                json_dict['data']['container'] = json_dict['container']
                 print(f"Received message: {json.dumps(json_dict, indent=4)}")
                 await q.put(json_dict)
             else:
